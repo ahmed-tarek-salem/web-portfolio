@@ -14,6 +14,8 @@ dependencies:
 
   cupertino_icons: ^1.0.2
   riverpod: ^2.3.5
+  bordered_text: ^2.0.0
+  sizer: ^2.0.15
 
 dev_dependencies:
   flutter_test:
@@ -28,3 +30,10 @@ flutter:
     - family: goku
       fonts:
         - asset: assets/fonts/Goku.ttf
+    - family: raleway
+      fonts:
+        - asset: assets/fonts/Raleway.ttf
+    - family: sigmar
+      fonts:
+        - asset: assets/fonts/Sigmar.ttf
+
