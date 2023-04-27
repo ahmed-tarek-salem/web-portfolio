@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:personal_portfolio/constants/app_colors.dart';
-import 'package:personal_portfolio/screens/home_screen.dart';
+import 'package:personal_portfolio/presentation/modules/home/home_screen.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
@@ -15,10 +15,8 @@ class MyApp extends StatelessWidget {
     return Sizer(
       builder: ((context, orientation, deviceType) {
         final queryData =
-            MediaQueryData.fromWindow(WidgetsBinding.instance!.window);
-        final height = queryData.size.height;
+            MediaQueryData.fromWindow(WidgetsBinding.instance.window);
         final width = queryData.size.width;
-        print(width);
         return MaterialApp(
             title: 'Personal Portfolio',
             theme: ThemeData(
@@ -26,6 +24,10 @@ class MyApp extends StatelessWidget {
                 headlineLarge: TextStyle(
                     fontFamily: 'goku',
                     fontSize: width > 700 ? 130 : 80,
+                    color: AppColors.whiteColor),
+                headlineMedium: TextStyle(
+                    fontFamily: 'goku',
+                    fontSize: width > 700 ? 50 : 40,
                     color: AppColors.whiteColor),
                 bodySmall: TextStyle(
                   fontFamily: 'raleway',
