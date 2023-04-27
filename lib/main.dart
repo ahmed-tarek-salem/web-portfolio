@@ -1,17 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:personal_portfolio/constants/app_colors.dart';
 import 'package:personal_portfolio/presentation/modules/home/home_screen.dart';
+import 'package:personal_portfolio/providers/theme_provider.dart';
 import 'package:sizer/sizer.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(const ProviderScope(child: MyApp()));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends ConsumerWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final primaryColor = ref.watch(colorPalleteProvider)[0];
+    final lightPrimaryColor = ref.watch(colorPalleteProvider)[1];
     return Sizer(
       builder: ((context, orientation, deviceType) {
         final queryData =
@@ -20,6 +24,8 @@ class MyApp extends StatelessWidget {
         return MaterialApp(
             title: 'Personal Portfolio',
             theme: ThemeData(
+              primaryColor: primaryColor,
+              primaryColorLight: lightPrimaryColor,
               textTheme: TextTheme(
                 headlineLarge: TextStyle(
                     fontFamily: 'goku',
@@ -28,6 +34,10 @@ class MyApp extends StatelessWidget {
                 headlineMedium: TextStyle(
                     fontFamily: 'goku',
                     fontSize: width > 700 ? 50 : 40,
+                    color: AppColors.whiteColor),
+                headlineSmall: TextStyle(
+                    fontFamily: 'goku',
+                    fontSize: width > 700 ? 35 : 30,
                     color: AppColors.whiteColor),
                 bodySmall: TextStyle(
                   fontFamily: 'raleway',

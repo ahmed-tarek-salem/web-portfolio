@@ -21,11 +21,11 @@ class HeaderScreen extends StatelessWidget {
           width: 100.w,
           decoration: BoxDecoration(
             border: Border.all(color: Colors.red),
-            gradient: const RadialGradient(
+            gradient: RadialGradient(
                 radius: 1.1,
-                stops: [0.01, 1],
+                stops: const [0.01, 1],
                 center: Alignment.topCenter,
-                colors: [AppColors.greenColor, AppColors.blackColor]),
+                colors: [Theme.of(context).primaryColor, AppColors.blackColor]),
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -37,7 +37,7 @@ class HeaderScreen extends StatelessWidget {
                 clipBehavior: Clip.none,
                 children: [
                   Positioned(
-                      left: 15.w, child: const SingleStakedLetter(letter: 'A')),
+                      left: 15.w, child: const SingleStakedLetter(letter: 'T')),
                   const InfoColumn(),
                 ],
               ),

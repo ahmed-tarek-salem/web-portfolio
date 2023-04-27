@@ -19,7 +19,7 @@ class SingleStakedLetter extends StatelessWidget {
       stackedTextStyle: Theme.of(context)
           .textTheme
           .headlineLarge!
-          .copyWith(color: AppColors.greenShadowColor),
+          .copyWith(color: Theme.of(context).primaryColorLight),
       bottom: -2.5.sp,
       left: -1.sp,
     );

@@ -35,7 +35,7 @@ class StackedBorderedText extends StatelessWidget {
           left: left,
           right: right,
           child: BorderedText(
-              strokeColor: AppColors.greenShadowColor,
+              strokeColor: Theme.of(context).primaryColorLight,
               strokeWidth: 1,
               child: Text(
                 mainText,
