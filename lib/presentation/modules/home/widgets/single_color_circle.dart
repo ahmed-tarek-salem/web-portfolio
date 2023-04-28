@@ -4,7 +4,7 @@ import 'package:personal_portfolio/constants/app_colors.dart';
 import 'package:personal_portfolio/constants/app_constants.dart';
 import 'package:personal_portfolio/providers/theme_provider.dart';
 
-class SingleColorCircle extends StatefulWidget {
+class SingleColorCircle extends ConsumerStatefulWidget {
   final List<Color> colorPallete;
   final bool isSelected;
   const SingleColorCircle({
@@ -14,30 +14,30 @@ class SingleColorCircle extends StatefulWidget {
   });
 
   @override
-  State<SingleColorCircle> createState() => _SingleColorCircleState();
+  ConsumerState<SingleColorCircle> createState() => _SingleColorCircleState();
 }
 
-class _SingleColorCircleState extends State<SingleColorCircle> {
+class _SingleColorCircleState extends ConsumerState<SingleColorCircle> {
   bool _isHovering = false;
+
+  void _handleHover(bool isHovering) {
+    setState(() {
+      _isHovering = isHovering;
+    });
+  }
+
+  void _onTap() {
+    ref.read(colorPalleteProvider.notifier).setThemeColor(widget.colorPallete);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, child) {
-      final provider = ref.read(colorPalleteProvider.notifier);
       return MouseRegion(
-        onEnter: (event) {
-          setState(() {
-            _isHovering = true;
-          });
-        },
-        onExit: (event) {
-          setState(() {
-            _isHovering = false;
-          });
-        },
+        onEnter: (_) => _handleHover(true),
+        onExit: (_) => _handleHover(false),
         child: GestureDetector(
-            onTap: () {
-              provider.setThemeColor(widget.colorPallete);
-            },
+            onTap: _onTap,
             child: Container(
               height: 30,
               width: 30,

@@ -9,7 +9,7 @@ final colorPalleteProvider =
 });
 
 class ColorPalleteNotifier extends StateNotifier<List<Color>> {
-  ColorPalleteNotifier() : super(AppPalettes.greenPallete);
+  ColorPalleteNotifier() : super(AppPalettes.greenPalette);
 
   void setThemeColor(List<Color> colorPallete) {
     state = colorPallete;

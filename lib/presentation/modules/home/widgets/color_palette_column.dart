@@ -30,34 +30,24 @@ class ColorPalleteColumn extends StatelessWidget {
             SizedBox(height: 10.h),
             Consumer(builder: (context, ref, child) {
               final provider = ref.read(colorPalleteProvider.notifier);
-              return Column(
-                children: [
-                  SingleColorCircle(
-                    colorPallete: AppPalettes.greenPallete,
-                    isSelected:
-                        provider.isTheSamePallete(AppPalettes.greenPallete),
-                  ),
-                  const VerticalGreyDivider(),
-                  SingleColorCircle(
-                      colorPallete: AppPalettes.pinkPallete,
-                      isSelected:
-                          provider.isTheSamePallete(AppPalettes.pinkPallete)),
-                  const VerticalGreyDivider(),
-                  SingleColorCircle(
-                      colorPallete: AppPalettes.purplePallete,
-                      isSelected:
-                          provider.isTheSamePallete(AppPalettes.purplePallete)),
-                  const VerticalGreyDivider(),
-                  SingleColorCircle(
-                      colorPallete: AppPalettes.yellowPallete,
-                      isSelected:
-                          provider.isTheSamePallete(AppPalettes.yellowPallete)),
-                  const VerticalGreyDivider(),
-                  SingleColorCircle(
-                      colorPallete: AppPalettes.bluePallete,
-                      isSelected:
-                          provider.isTheSamePallete(AppPalettes.bluePallete)),
-                ],
+              return SizedBox(
+                width: 50,
+                child: ListView.builder(
+                  shrinkWrap: true,
+                  itemCount: AppPalettes.listOfPalettes.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    final appPalette = AppPalettes.listOfPalettes[index];
+                    return Column(
+                      children: [
+                        SingleColorCircle(
+                          colorPallete: appPalette,
+                          isSelected: provider.isTheSamePallete(appPalette),
+                        ),
+                        const VerticalGreyDivider(),
+                      ],
+                    );
+                  },
+                ),
               );
             })
           ],
