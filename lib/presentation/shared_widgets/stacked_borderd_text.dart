@@ -1,6 +1,6 @@
 import 'package:bordered_text/bordered_text.dart';
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/constants/app_colors.dart';
+import 'package:personal_portfolio/utils/constants/app_colors.dart';
 
 class StackedBorderedText extends StatelessWidget {
   final String mainText;

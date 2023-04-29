@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:personal_portfolio/constants/app_colors.dart';
-import 'package:personal_portfolio/constants/app_constants.dart';
+import 'package:personal_portfolio/utils/constants/app_colors.dart';
+import 'package:personal_portfolio/utils/constants/app_constants.dart';
 import 'package:personal_portfolio/providers/theme_provider.dart';
 
 class SingleColorCircle extends ConsumerStatefulWidget {
-  final List<Color> colorPallete;
+  final List<Color> colorPalette;
   final bool isSelected;
   const SingleColorCircle({
-    required this.colorPallete,
+    required this.colorPalette,
     required this.isSelected,
     super.key,
   });
@@ -27,7 +27,7 @@ class _SingleColorCircleState extends ConsumerState<SingleColorCircle> {
   }
 
   void _onTap() {
-    ref.read(colorPalleteProvider.notifier).setThemeColor(widget.colorPallete);
+    ref.read(colorPaletteProvider.notifier).setThemeColor(widget.colorPalette);
   }
 
   @override
@@ -54,7 +54,7 @@ class _SingleColorCircleState extends ConsumerState<SingleColorCircle> {
                   width: _isHovering ? 30 : 10,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(30),
-                    color: widget.colorPallete[1],
+                    color: widget.colorPalette[1],
                   ),
                 ),
               ),

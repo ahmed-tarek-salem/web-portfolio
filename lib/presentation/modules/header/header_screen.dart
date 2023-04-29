@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/constants/app_colors.dart';
+import 'package:personal_portfolio/utils/constants/app_colors.dart';
 import 'package:personal_portfolio/presentation/modules/header/widgets/first_name.dart';
 import 'package:personal_portfolio/presentation/modules/header/widgets/info_column.dart';
 import 'package:personal_portfolio/presentation/modules/header/widgets/second_name.dart';

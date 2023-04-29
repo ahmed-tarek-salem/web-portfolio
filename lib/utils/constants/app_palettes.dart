@@ -1,6 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:personal_portfolio/constants/app_colors.dart';
+// ignore_for_file: public_member_api_docs
 
+import 'package:flutter/material.dart';
+import 'package:personal_portfolio/utils/constants/app_colors.dart';
+
+///A class that defines the app palettes that wil be used through the application.
+///
+///Each palette contain a primary color and light primary color.
 class AppPalettes {
   static const List<Color> greenPalette = [
     AppColors.greenColor,

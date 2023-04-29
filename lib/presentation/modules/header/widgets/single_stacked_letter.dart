@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/constants/app_colors.dart';
+import 'package:personal_portfolio/utils/constants/app_colors.dart';
 import 'package:personal_portfolio/presentation/shared_widgets/stacked_filled_text.dart';
 import 'package:sizer/sizer.dart';
 

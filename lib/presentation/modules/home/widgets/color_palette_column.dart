@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:personal_portfolio/constants/app_palletes.dart';
+import 'package:personal_portfolio/utils/constants/app_palettes.dart';
 import 'package:personal_portfolio/presentation/modules/home/widgets/single_color_circle.dart';
 import 'package:personal_portfolio/presentation/modules/home/widgets/vertical_grey_divider.dart';
 import 'package:personal_portfolio/providers/theme_provider.dart';
@@ -29,7 +29,7 @@ class ColorPalleteColumn extends StatelessWidget {
                 ])),
             SizedBox(height: 10.h),
             Consumer(builder: (context, ref, child) {
-              final provider = ref.read(colorPalleteProvider.notifier);
+              final provider = ref.read(colorPaletteProvider.notifier);
               return SizedBox(
                 width: 50,
                 child: ListView.builder(
@@ -40,8 +40,8 @@ class ColorPalleteColumn extends StatelessWidget {
                     return Column(
                       children: [
                         SingleColorCircle(
-                          colorPallete: appPalette,
-                          isSelected: provider.isTheSamePallete(appPalette),
+                          colorPalette: appPalette,
+                          isSelected: provider.isTheSamePalette(appPalette),
                         ),
                         const VerticalGreyDivider(),
                       ],

@@ -1,21 +1,21 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:personal_portfolio/constants/app_palletes.dart';
+import 'package:personal_portfolio/utils/constants/app_palettes.dart';
 
-final colorPalleteProvider =
-    StateNotifierProvider<ColorPalleteNotifier, List<Color>>((ref) {
-  return ColorPalleteNotifier();
+final colorPaletteProvider =
+    StateNotifierProvider<ColorPaletteNotifier, List<Color>>((ref) {
+  return ColorPaletteNotifier();
 });
 
-class ColorPalleteNotifier extends StateNotifier<List<Color>> {
-  ColorPalleteNotifier() : super(AppPalettes.greenPalette);
+class ColorPaletteNotifier extends StateNotifier<List<Color>> {
+  ColorPaletteNotifier() : super(AppPalettes.greenPalette);
 
-  void setThemeColor(List<Color> colorPallete) {
-    state = colorPallete;
+  void setThemeColor(List<Color> colorPalette) {
+    state = colorPalette;
   }
 
-  bool isTheSamePallete(List<Color> comparedPallete) {
-    return listEquals(state, comparedPallete);
+  bool isTheSamePalette(List<Color> comparedPalette) {
+    return listEquals(state, comparedPalette);
   }
 }

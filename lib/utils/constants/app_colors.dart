@@ -1,5 +1,8 @@
+// ignore_for_file: public_member_api_docs
+
 import 'package:flutter/material.dart';
 
+/// A class that defines a set of custom colors for the app.
 class AppColors {
   static const Color blackColor = Color(0xff0F0F0F);
   static const Color greenColor = Color(0xff3D934A);

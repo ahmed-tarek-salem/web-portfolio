@@ -1,7 +1,7 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/constants/app_colors.dart';
-import 'package:personal_portfolio/constants/app_constants.dart';
+import 'package:personal_portfolio/utils/constants/app_colors.dart';
+import 'package:personal_portfolio/utils/constants/app_constants.dart';
 import 'package:personal_portfolio/presentation/modules/header/header_screen.dart';
 import 'package:personal_portfolio/presentation/modules/home/widgets/color_palette_column.dart';
 import 'package:sizer/sizer.dart';

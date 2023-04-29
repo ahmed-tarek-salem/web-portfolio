@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:personal_portfolio/constants/app_colors.dart';
+import 'package:personal_portfolio/utils/constants/app_colors.dart';
 import 'package:sizer/sizer.dart';
 
 class StatusRow extends StatelessWidget {
