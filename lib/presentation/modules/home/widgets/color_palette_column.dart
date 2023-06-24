@@ -6,8 +6,8 @@ import 'package:personal_portfolio/presentation/modules/home/widgets/vertical_gr
 import 'package:personal_portfolio/providers/theme_provider.dart';
 import 'package:sizer/sizer.dart';
 
-class ColorPalleteColumn extends StatelessWidget {
-  const ColorPalleteColumn({
+class ColorPaletteColumn extends StatelessWidget {
+  const ColorPaletteColumn({
     super.key,
   });
 

@@ -34,6 +34,7 @@ class _SingleColorCircleState extends ConsumerState<SingleColorCircle> {
   Widget build(BuildContext context) {
     return Consumer(builder: (context, ref, child) {
       return MouseRegion(
+        cursor: SystemMouseCursors.click,
         onEnter: (_) => _handleHover(true),
         onExit: (_) => _handleHover(false),
         child: GestureDetector(

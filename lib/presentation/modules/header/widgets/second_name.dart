@@ -1,8 +1,10 @@
-
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 
+/// A widget that displays my first name "Tarek".
+
 class SecondName extends StatelessWidget {
+  /// Constructs a [SecondName] widget.
   const SecondName({
     super.key,
   });

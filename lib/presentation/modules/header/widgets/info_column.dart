@@ -1,7 +1,8 @@
-
 import 'package:flutter/material.dart';
 
+/// A widget that displays my info on the header screen.
 class InfoColumn extends StatelessWidget {
+  /// Constructs a [InfoColumn] widget.
   const InfoColumn({
     super.key,
   });

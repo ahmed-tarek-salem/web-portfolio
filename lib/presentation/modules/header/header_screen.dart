@@ -7,7 +7,10 @@ import 'package:personal_portfolio/presentation/modules/header/widgets/single_st
 import 'package:personal_portfolio/presentation/modules/header/widgets/status_row.dart';
 import 'package:sizer/sizer.dart';
 
+/// The header screen widget that displays the first screen the user
+/// see with various components.
 class HeaderScreen extends StatelessWidget {
+  /// Constructs a [HeaderScreen] widget.
   const HeaderScreen({
     super.key,
   });

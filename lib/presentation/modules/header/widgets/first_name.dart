@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:personal_portfolio/presentation/shared_widgets/stacked_borderd_text.dart';
 import 'package:sizer/sizer.dart';
 
+/// A widget that displays my first name "Ahmed".
 class FirstName extends StatelessWidget {
+  /// Constructs a [FirstName] widget.
   const FirstName({
     super.key,
   });
