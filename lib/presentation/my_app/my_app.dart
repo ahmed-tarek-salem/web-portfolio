@@ -1,5 +1,4 @@
-
-
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:personal_portfolio/presentation/modules/home/home_screen.dart';
@@ -30,7 +29,7 @@ class MyApp extends ConsumerWidget {
     return Sizer(
       builder: ((context, orientation, deviceType) {
         final queryData =
-            MediaQueryData.fromWindow(WidgetsBinding.instance.window);
+            MediaQueryData.fromView(PlatformDispatcher.instance.views.first);
         final width = queryData.size.width;
         return MaterialApp(
             title: 'Personal Portfolio',

@@ -44,7 +44,7 @@ class HeaderScreen extends StatelessWidget {
                   const InfoColumn(),
                 ],
               ),
-              SizedBox(height: 5.h),
+              SizedBox(height: 2.h),
               const StatusRow()
             ],
           ),

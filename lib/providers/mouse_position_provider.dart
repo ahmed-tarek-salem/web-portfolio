@@ -7,8 +7,10 @@ final mousePositionProvider =
 });
 
 class MousePositionNotifier extends StateNotifier<Offset> {
+  /// Define the init point for the mouse, which is zero.
   MousePositionNotifier() : super(Offset.zero);
 
+  /// Sets the mouse position in the application that comes from [MouseRegion] widget, which wraps the home screen.
   void setMousePosition(Offset mousePosition) {
     state = mousePosition;
   }

@@ -1,12 +1,11 @@
 name: personal_portfolio
 description: Portfolio website
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
-
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
 environment:
-  sdk: '>=2.19.6 <3.0.0'
+  sdk: ">=2.19.6 <3.0.0"
 
 dependencies:
   flutter:
@@ -15,7 +14,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_riverpod: ^2.0.2
   bordered_text: ^2.0.0
-  sizer: ^2.0.15
+  sizer: 2.0.15
 
 dev_dependencies:
   flutter_test:
@@ -36,4 +35,3 @@ flutter:
     - family: sigmar
       fonts:
         - asset: assets/fonts/Sigmar.ttf
-

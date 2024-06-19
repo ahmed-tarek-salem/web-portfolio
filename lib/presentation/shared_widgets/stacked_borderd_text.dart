@@ -38,7 +38,7 @@ class StackedBorderedText extends StatelessWidget {
               strokeColor: Theme.of(context).primaryColorLight,
               strokeWidth: 1,
               child: Text(
-                mainText,
+                stackedText,
                 style: stackedTextStyle,
               )),
         ),

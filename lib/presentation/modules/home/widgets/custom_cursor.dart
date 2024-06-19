@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:personal_portfolio/providers/mouse_position_provider.dart';
-import 'package:personal_portfolio/utils/constants/app_colors.dart';
-import 'package:personal_portfolio/utils/constants/app_constants.dart';
 import 'package:sizer/sizer.dart';
 
 class CustomCircularCursor extends ConsumerWidget {
@@ -31,12 +29,6 @@ class CustomCircularCursor extends ConsumerWidget {
               color: color,
             ),
             color: Colors.transparent),
-        // child: Center(
-        //   child: CircleAvatar(
-        //     radius: 1.sp,
-        //     backgroundColor: AppColors.whiteColor,
-        //   ),
-        // ),
       ),
     );
   }
