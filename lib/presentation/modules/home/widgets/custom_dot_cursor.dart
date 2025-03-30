@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:personal_portfolio/providers/mouse_position_provider.dart';
+
 import 'package:sizer/sizer.dart';
 
-class CustomDotCursor extends ConsumerWidget {
+class CustomDotCursor extends StatelessWidget {
+  final Offset position;
   const CustomDotCursor({
+    required this.position,
     super.key,
   });
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
-    final horizontalPosition = ref.watch(mousePositionProvider).dx;
-    final verticalPosition = ref.watch(mousePositionProvider).dy;
+  Widget build(BuildContext context) {
+    final horizontalPosition = position.dx;
+    final verticalPosition = position.dy;
     return AnimatedPositioned(
       duration: const Duration(milliseconds: 100),
       left: horizontalPosition,

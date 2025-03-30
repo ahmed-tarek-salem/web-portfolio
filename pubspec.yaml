@@ -1,6 +1,5 @@
 name: personal_portfolio
 description: Portfolio website
-publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
@@ -12,7 +11,6 @@ dependencies:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
-  flutter_riverpod: ^2.0.2
   bordered_text: ^2.0.0
   sizer: 2.0.15
 
